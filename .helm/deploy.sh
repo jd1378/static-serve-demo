@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Add the helm chart repo
 helm repo add jd1378 https://jd1378.github.io/helm-charts
 helm repo update
 
