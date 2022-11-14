@@ -4,6 +4,7 @@
   - [Deploying on Kubernetes](#deploying-on-kubernetes)
     - [Deploying Chart](#deploying-chart)
     - [Scaling Horizon](#scaling-horizon)
+  - [To test this image](#to-test-this-image)
 
 # static-serve Helm Demo
 
@@ -28,3 +29,9 @@ A brief example can be found in `.helm/deploy.sh` on how to deploy your files.
 ### Scaling Horizon
 
 It is well known that for Kubernetes, you may scale based on CPU or memory allocated to each pod. But you can also scale based on Prometheus metrics.
+
+## To test this image
+
+```
+docker run --rm -p 9999:80 javadmnjd/static-serve-demo
+```
