@@ -3,7 +3,7 @@ name: Docker Commit
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   push_demo:
