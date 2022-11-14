@@ -41,14 +41,14 @@
         ]
       },
       "action": {
-        "share": "/var/www/dist$uri",
-        "chroot": "/var/www/dist/",
+        "share": "/var/www$uri",
+        "chroot": "/var/www/",
         "index": "index.html"
       }
     },
     {
       "action": {
-        "share": "/var/www/dist/index.html"
+        "share": "/var/www/index.html"
       }
     }
   ],
