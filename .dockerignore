@@ -1,0 +1,14 @@
+.git
+.github
+.helm
+*.md
+**.git
+.idea
+**.gitignore
+**.gitattributes
+**.sass-cache
+*.env*
+**/*node_modules
+Dockerfile
+LICENSE
+README

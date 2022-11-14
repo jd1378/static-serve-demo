@@ -1,0 +1,56 @@
+{
+  "listeners": {
+    "*:80": {
+      "pass": "routes"
+    }
+  },
+  "routes": [
+    {
+      "match": {
+        "uri": [
+          "*.manifest",
+          "*.appcache",
+          "*.html",
+          "*.json",
+          "*.rss",
+          "*.atom",
+          "*.jpg",
+          "*.jpeg",
+          "*.gif",
+          "*.png",
+          "*.ico",
+          "*.cur",
+          "*.gz",
+          "*.svg",
+          "*.svgz",
+          "*.mp4",
+          "*.ogg",
+          "*.ogv",
+          "*.webm",
+          "*.htc",
+          "*.css",
+          "*.js",
+          "*.map",
+          "*.ttf",
+          "*.ttc",
+          "*.otf",
+          "*.eot",
+          "*.woff",
+          "*.woff2",
+          "*.txt"
+        ]
+      },
+      "action": {
+        "share": "/var/www/dist$uri",
+        "chroot": "/var/www/dist/",
+        "index": "index.html"
+      }
+    },
+    {
+      "action": {
+        "share": "/var/www/dist/index.html"
+      }
+    }
+  ],
+  "access_log": "/dev/stdout"
+}
