@@ -16,6 +16,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Docker meta
+        id: docker_meta
+        uses: docker/metadata-action@v4.0.1
+        with:
+          images: javadmnjd/static-serve-demo
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
 
@@ -34,5 +43,6 @@ jobs:
         with:
           push: true
           context: .
-          tags: javadmnjd/static-serve-demo:${{ github.sha }}
+          tags: ${{ steps.docker_meta.outputs.tags }}
+          labels: ${{ steps.docker_meta.outputs.labels }}
           file: Dockerfile
